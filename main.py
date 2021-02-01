@@ -32,6 +32,10 @@ for i in range(2):
     letters.letterB(ralf, size)
     letters.letterC(ralf, size)
     letters.letterD(ralf, size)
+    letters.letterE(ralf, size)
+    letters.letterF(ralf, size)
+    letters.letterG(ralf, size)
+    letters.letterH(ralf, size)
     letters.space(ralf, size)
 
 

@@ -1,4 +1,3 @@
-import turtle
 import math
 
 
@@ -77,16 +76,94 @@ def letterD(turtle, size):
     turtle.down()
 
 def letterE(turtle, size):
-    pass
+    dist = size/2
+    dist2 = size*7/16
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.right(90)
+    turtle.forward(dist2)
+    turtle.right(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.right(90)
+    turtle.forward(dist2)
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.left(90)
+    turtle.forward(dist2)
+    turtle.up()
+    turtle.forward(dist/10)
+    turtle.down()
 
 def letterF(turtle, size):
-    pass
+    dist = size/2
+    dist2 = size*7/16
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.right(90)
+    turtle.forward(dist2)
+    turtle.right(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.right(90)
+    turtle.forward(dist2)
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.left(90)
+    turtle.forward(dist2)
+    turtle.forward(dist/10)
+    turtle.down()
 
 def letterG(turtle, size):
-    pass
+    dist = size/4
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.left(180)
+    turtle.circle(dist, 180)
+    turtle.up()
+    turtle.forward(dist*2)
+    turtle.down()
+    turtle.circle(dist, 180)
+    turtle.forward(dist*2)
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.forward(dist)
+    turtle.right(90)
+    turtle.forward(dist)
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist/5)
+    turtle.down()
 
 def letterH(turtle, size):
-    pass
+    dist = size*7/16
+    dist2 = size/2
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.up()
+    turtle.backward(dist2)
+    turtle.down()
+    turtle.right(90)
+    turtle.forward(dist)
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist2)
+    turtle.down()
+    turtle.right(180)
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist2/10)
+    turtle.down()
 
 def letterI(turtle, size):
     pass
