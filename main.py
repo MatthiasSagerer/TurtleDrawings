@@ -15,7 +15,7 @@ def reset(sec):
 window = turtle.Screen()
 window.setup(width=1.0, height=1.0, startx=None, starty=None)
 ralf = turtle.Turtle()
-ralf.speed(100)
+ralf.speed(2)
 
 
 '''
@@ -26,18 +26,6 @@ reset(3)
 shapes.polygonSpiral(ralf, 4, 2, 175, 12)
 '''
 
-size = 100
-for i in range(2):
-    letters.letterA(ralf, size)
-    letters.letterB(ralf, size)
-    letters.letterC(ralf, size)
-    letters.letterD(ralf, size)
-    letters.letterE(ralf, size)
-    letters.letterF(ralf, size)
-    letters.letterG(ralf, size)
-    letters.letterH(ralf, size)
-    letters.space(ralf, size)
-
-
+letters.write(ralf, 100, 'oepeqereseteuevewexeyez abc')
 
 tkinter.mainloop()
