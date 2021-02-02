@@ -289,12 +289,12 @@ def letterO(turtle, size):
     turtle.up()
     turtle.forward(dist)
     turtle.left(90)
-    turtle.forward(dist*2.2)
+    turtle.forward(dist * 2.2)
     turtle.down()
 
 
 def letterP(turtle, size):
-    dist = size/2
+    dist = size / 2
     dist2 = size / 5
     dist3 = size / 4
     turtle.left(90)
@@ -314,7 +314,7 @@ def letterP(turtle, size):
 
 def letterQ(turtle, size):
     dist = size / 4
-    dist2 = size/10
+    dist2 = size / 10
     turtle.left(90)
     turtle.up()
     turtle.forward(dist)
@@ -325,7 +325,7 @@ def letterQ(turtle, size):
     turtle.up()
     turtle.backward(dist2)
     turtle.down()
-    turtle.forward(2*dist2)
+    turtle.forward(2 * dist2)
     turtle.up()
     turtle.backward(dist2)
     turtle.down()
@@ -337,44 +337,203 @@ def letterQ(turtle, size):
     turtle.up()
     turtle.forward(dist)
     turtle.left(90)
-    turtle.forward(dist*2.2)
+    turtle.forward(dist * 2.2)
     turtle.down()
 
 
 def letterR(turtle, size):
-    pass
+    dist = size / 2
+    dist2 = size / 5
+    dist3 = size / 4
+    angle = math.degrees(math.atan((dist2 + dist3) / dist))
+    turtle.left(90)
+    turtle.forward(dist)
+    turtle.right(90)
+    turtle.forward(dist2)
+    turtle.circle(dist3, 180)
+    turtle.forward(dist2)
+    turtle.left(90)
+    turtle.forward(dist)
+    turtle.left(angle)
+    turtle.forward(dist / math.cos(math.radians(angle)))
+    turtle.left(90 - angle)
+    turtle.up()
+    turtle.forward(dist / 10)
+    turtle.down()
 
 
 def letterS(turtle, size):
-    pass
+    dist = size / 4
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.right(180)
+    turtle.circle(dist, 270)
+    turtle.right(180)
+    turtle.circle(dist, -270)
+    turtle.right(180)
+    turtle.up()
+    turtle.forward(3 * dist)
+    turtle.left(90)
+    turtle.forward(dist / 5)
+    turtle.down()
 
 
 def letterT(turtle, size):
-    pass
+    dist = size * 7 / 16
+    dist2 = dist / 2
+    turtle.up()
+    turtle.forward(dist2)
+    turtle.down()
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.right(90)
+    turtle.up()
+    turtle.backward(dist2)
+    turtle.down()
+    turtle.forward(dist)
+    turtle.right(90)
+    turtle.up()
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size / 20)
+    turtle.down()
 
 
 def letterU(turtle, size):
-    pass
+    dist = size / 4
+    dist2 = 3 * dist
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.right(180)
+    turtle.circle(dist, 180)
+    turtle.forward(dist2)
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(2 * dist)
+    turtle.down()
+    turtle.left(90)
+    turtle.forward(dist2)
+    turtle.up()
+    turtle.forward(dist)
+    turtle.left(90)
+    turtle.forward(2.2 * dist)
+    turtle.down()
 
 
 def letterV(turtle, size):
-    pass
+    angle = 15
+    dist = size / math.cos(math.radians(angle))
+    turtle.up()
+    turtle.left(90)
+    turtle.forward(size)
+    turtle.down()
+    turtle.right(180 - angle)
+    turtle.forward(dist)
+    turtle.left(180 - 2 * angle)
+    turtle.forward(dist)
+    turtle.right(180 - angle)
+    turtle.up()
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size / 20)
+    turtle.down()
 
 
 def letterW(turtle, size):
-    pass
+    angle = 12
+    angle2 = 180 - angle
+    angle3 = 180 - 2 * angle
+    dist = size / math.cos(math.radians(angle))
+    dist2 = dist / 2
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(size)
+    turtle.down()
+    turtle.right(angle2)
+    turtle.forward(dist)
+    turtle.left(angle3)
+    turtle.forward(dist2)
+    turtle.right(angle3)
+    turtle.forward(dist2)
+    turtle.left(angle3)
+    turtle.forward(dist)
+    turtle.right(angle2)
+    turtle.up()
+    turtle.forward(size)
+    turtle.left(90)
+    turtle.forward(size / 20)
+    turtle.down()
 
 
 def letterX(turtle, size):
-    pass
+    angle = 27
+    angle2 = 90 - angle
+    angle3 = 90 + angle
+    dist = size / math.cos(math.radians(angle))
+    turtle.left(angle2)
+    turtle.forward(dist)
+    turtle.left(angle3)
+    turtle.up()
+    turtle.forward(size * math.tan(math.radians(angle)))
+    turtle.down()
+    turtle.left(angle3)
+    turtle.forward(dist)
+    turtle.left(angle2)
+    turtle.up()
+    turtle.forward(size / 20)
+    turtle.down()
 
 
 def letterY(turtle, size):
-    pass
+    angle = 27
+    angle2 = 90 + angle
+    dist = 0.5 * size * math.tan(math.radians(angle))
+    dist2 = size / 2
+    dist3 = 0.5 * size / math.cos(math.radians(angle))
+    turtle.up()
+    turtle.forward(dist)
+    turtle.down()
+    turtle.left(90)
+    turtle.forward(size / 2)
+    turtle.left(angle)
+    turtle.forward(dist3)
+    turtle.right(angle2)
+    turtle.up()
+    turtle.forward(2 * dist)
+    turtle.down()
+    turtle.right(angle2)
+    turtle.forward(dist3)
+    turtle.left(angle)
+    turtle.up()
+    turtle.forward(dist2)
+    turtle.left(90)
+    turtle.forward(dist)
+    turtle.forward(dist2 / 10)
+    turtle.down()
 
 
 def letterZ(turtle, size):
-    pass
+    angle = 27
+    angle2 = 90 + angle
+    dist = size * math.tan(math.radians(angle))
+    dist2 = size / math.cos(math.radians(angle))
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(size)
+    turtle.down()
+    turtle.right(90)
+    turtle.forward(dist)
+    turtle.right(angle2)
+    turtle.forward(dist2)
+    turtle.left(angle2)
+    turtle.forward(dist)
+    turtle.up()
+    turtle.forward(size / 20)
+    turtle.down()
 
 
 characters = {
@@ -412,3 +571,22 @@ def write(turtle, size, string):
     upper_string = string.upper()
     for char in upper_string:
         characters[char](turtle, size)
+
+
+colors = [
+    (255, 0, 0),
+    (255, 165, 0),
+    (255, 255, 0),
+    (0, 128, 0),
+    (0, 0, 255),
+    (75, 0, 130),
+    (238, 130, 238)
+]
+
+
+def rainbowWrite(turtle, size, string):
+    upper_string = string.upper()
+    for i in range(len(string)):
+        turtle.pencolor(colors[i % len(colors)])
+        characters[upper_string[i]](turtle, size)
+    turtle.pencolor((0, 0, 0))
