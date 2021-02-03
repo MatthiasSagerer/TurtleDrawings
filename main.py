@@ -1,5 +1,4 @@
 import turtle
-import tkinter
 import shapes
 import letters
 import time
@@ -25,8 +24,10 @@ def resetAndGoTo(turtle, x, y):
 window = turtle.Screen()
 window.setup(width=1.0, height=1.0, startx=None, starty=None)
 window.colormode(255)
+window.bgcolor('black')
 ralf = turtle.Turtle()
-ralf.speed(20)
+ralf.speed(200)
+ralf.pensize(5)
 
 resetAndGoTo(ralf, -300, 0)
 
@@ -44,5 +45,8 @@ reset(ralf, 3)
 
 shapes.rainbowPolygonSpiral(ralf, 4, 2, 175, 12)
 
-tkinter.mainloop()
 window.exitonclick()
+try:
+    turtle.mainloop()
+except:
+    pass
