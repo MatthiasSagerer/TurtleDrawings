@@ -7,6 +7,47 @@ def space(turtle, size):
     turtle.down()
 
 
+def verticalUp(turtle, size):
+    turtle.left(90)
+    turtle.forward(size)
+
+
+def dist1(size):
+    return size / 2, size * 7 / 16
+
+
+def angle1():
+    return 27, 27 + 90
+
+
+def halfcircle(turtle, size):
+    dist = size / 4, size * 3 / 4
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist[0])
+    turtle.down()
+    turtle.right(180)
+    turtle.circle(dist[0], 180)
+    return dist
+
+
+def basicEF(turtle, size):
+    dist = dist1(size)
+    verticalUp(turtle, size)
+    turtle.right(90)
+    turtle.forward(dist[1])
+    turtle.right(90)
+    turtle.up()
+    turtle.forward(dist[0])
+    turtle.down()
+    turtle.right(90)
+    turtle.forward(dist[1])
+    turtle.left(90)
+    turtle.up()
+    turtle.forward(dist[0])
+    return dist
+
+
 def letterA(turtle, size):
     turtle.left(75)
     dist = size / math.cos(math.radians(15))
@@ -37,8 +78,7 @@ def letterB(turtle, size):
     turtle.forward(dist)
     turtle.circle(dist2, 180)
     turtle.forward(dist)
-    turtle.left(90)
-    turtle.forward(size)
+    verticalUp(turtle, size)
     turtle.left(90)
     turtle.forward(dist)
     turtle.up()
@@ -47,22 +87,16 @@ def letterB(turtle, size):
 
 
 def letterC(turtle, size):
-    dist = size / 4
-    turtle.left(90)
-    turtle.up()
-    turtle.forward(dist)
-    turtle.down()
-    turtle.right(180)
-    turtle.circle(dist, 180)
+    dist = halfcircle(turtle, size)
     turtle.up()
     turtle.forward(size / 2)
     turtle.down()
-    turtle.circle(dist, 180)
-    turtle.forward(dist * 2)
+    turtle.circle(dist[0], 180)
+    turtle.forward(dist[0] * 2)
     turtle.up()
-    turtle.forward(dist)
+    turtle.forward(dist[0])
     turtle.left(90)
-    turtle.forward(dist * 2.2)
+    turtle.forward(dist[0] * 2.2)
     turtle.down()
 
 
@@ -81,96 +115,60 @@ def letterD(turtle, size):
 
 
 def letterE(turtle, size):
-    dist = size / 2
-    dist2 = dist * 7 / 8
-    turtle.left(90)
-    turtle.forward(size)
-    turtle.right(90)
-    turtle.forward(dist2)
-    turtle.right(90)
-    turtle.up()
-    turtle.forward(dist)
-    turtle.down()
-    turtle.right(90)
-    turtle.forward(dist2)
-    turtle.left(90)
-    turtle.up()
-    turtle.forward(dist)
+    dist = basicEF(turtle, size)
     turtle.down()
     turtle.left(90)
-    turtle.forward(dist2)
+    turtle.forward(dist[1])
     turtle.up()
-    turtle.forward(dist / 10)
+    turtle.forward(dist[0] / 10)
     turtle.down()
 
 
 def letterF(turtle, size):
-    dist = size / 2
-    dist2 = dist * 7 / 8
+    dist = basicEF(turtle, size)
     turtle.left(90)
-    turtle.forward(size)
-    turtle.right(90)
-    turtle.forward(dist2)
-    turtle.right(90)
-    turtle.up()
-    turtle.forward(dist)
-    turtle.down()
-    turtle.right(90)
-    turtle.forward(dist2)
-    turtle.left(90)
-    turtle.up()
-    turtle.forward(dist)
-    turtle.left(90)
-    turtle.forward(dist2)
-    turtle.forward(dist / 10)
+    turtle.forward(dist[1])
+    turtle.forward(dist[0] / 10)
     turtle.down()
 
 
 def letterG(turtle, size):
-    dist = size / 4
+    dist = halfcircle(turtle, size)
+    turtle.up()
+    turtle.forward(dist[0] * 2)
+    turtle.down()
+    turtle.circle(dist[0], 180)
+    turtle.forward(dist[0] * 2)
     turtle.left(90)
     turtle.up()
-    turtle.forward(dist)
+    turtle.forward(dist[0])
     turtle.down()
-    turtle.left(180)
-    turtle.circle(dist, 180)
-    turtle.up()
-    turtle.forward(dist * 2)
-    turtle.down()
-    turtle.circle(dist, 180)
-    turtle.forward(dist * 2)
-    turtle.left(90)
-    turtle.up()
-    turtle.forward(dist)
-    turtle.down()
-    turtle.forward(dist)
+    turtle.forward(dist[0])
     turtle.right(90)
-    turtle.forward(dist)
+    turtle.forward(dist[0])
     turtle.left(90)
     turtle.up()
-    turtle.forward(dist / 5)
+    turtle.forward(dist[0] / 5)
     turtle.down()
 
 
 def letterH(turtle, size):
-    dist = size * 7 / 16
-    dist2 = size / 2
-    turtle.left(90)
-    turtle.forward(size)
+    dist = dist1(size)
+    verticalUp(turtle, size)
     turtle.up()
-    turtle.backward(dist2)
+    turtle.backward(dist[0])
     turtle.down()
     turtle.right(90)
-    turtle.forward(dist)
+    turtle.forward(dist[1])
     turtle.left(90)
     turtle.up()
-    turtle.forward(dist2)
+    turtle.forward(dist[0])
     turtle.down()
     turtle.right(180)
     turtle.forward(size)
     turtle.left(90)
     turtle.up()
-    turtle.forward(dist2 / 10)
+    turtle.forward(dist[0] / 10)
     turtle.down()
 
 
@@ -189,21 +187,15 @@ def letterI(turtle, size):
 
 
 def letterJ(turtle, size):
-    dist = size / 4
+    dist = halfcircle(turtle, size)
+    turtle.forward(dist[0] * 3)
     turtle.left(90)
-    turtle.up()
-    turtle.forward(dist)
-    turtle.down()
-    turtle.right(180)
-    turtle.circle(dist, 180)
-    turtle.forward(dist * 3)
-    turtle.left(90)
-    turtle.forward(dist * 2)
+    turtle.forward(dist[0] * 2)
     turtle.left(90)
     turtle.up()
     turtle.forward(size)
     turtle.left(90)
-    turtle.forward(dist * 2.2)
+    turtle.forward(dist[0] * 2.2)
     turtle.down()
 
 
@@ -230,8 +222,7 @@ def letterK(turtle, size):
 
 
 def letterL(turtle, size):
-    turtle.left(90)
-    turtle.forward(size)
+    verticalUp(turtle, size)
     turtle.up()
     turtle.backward(size)
     turtle.down()
@@ -245,8 +236,7 @@ def letterL(turtle, size):
 def letterM(turtle, size):
     angle = 30
     dist = 0.5 * size / math.cos(math.radians(angle))
-    turtle.left(90)
-    turtle.forward(size)
+    verticalUp(turtle, size)
     turtle.right(180 - angle)
     turtle.forward(dist)
     turtle.left(2 * (90 - angle))
@@ -262,8 +252,7 @@ def letterM(turtle, size):
 def letterN(turtle, size):
     angle = 25
     dist = size / math.cos(math.radians(angle))
-    turtle.left(90)
-    turtle.forward(size)
+    verticalUp(turtle, size)
     turtle.right(180 - angle)
     turtle.forward(dist)
     turtle.left(180 - angle)
@@ -276,20 +265,14 @@ def letterN(turtle, size):
 
 
 def letterO(turtle, size):
-    dist = size / 4
-    turtle.left(90)
+    dist = halfcircle(turtle, size)
+    turtle.forward(dist[0] * 2)
+    turtle.circle(dist[0], 180)
+    turtle.forward(dist[0] * 2)
     turtle.up()
-    turtle.forward(dist)
-    turtle.down()
-    turtle.right(180)
-    turtle.circle(dist, 180)
-    turtle.forward(dist * 2)
-    turtle.circle(dist, 180)
-    turtle.forward(dist * 2)
-    turtle.up()
-    turtle.forward(dist)
+    turtle.forward(dist[0])
     turtle.left(90)
-    turtle.forward(dist * 2.2)
+    turtle.forward(dist[0] * 2.2)
     turtle.down()
 
 
@@ -363,20 +346,15 @@ def letterR(turtle, size):
 
 
 def letterS(turtle, size):
-    dist = size / 4
-    turtle.left(90)
-    turtle.up()
-    turtle.forward(dist)
-    turtle.down()
+    dist = halfcircle(turtle, size)
+    turtle.circle(dist[0], 90)
     turtle.right(180)
-    turtle.circle(dist, 270)
-    turtle.right(180)
-    turtle.circle(dist, -270)
+    turtle.circle(dist[0], -270)
     turtle.right(180)
     turtle.up()
-    turtle.forward(3 * dist)
+    turtle.forward(3 * dist[0])
     turtle.left(90)
-    turtle.forward(dist / 5)
+    turtle.forward(dist[0] / 5)
     turtle.down()
 
 
@@ -402,25 +380,18 @@ def letterT(turtle, size):
 
 
 def letterU(turtle, size):
-    dist = size / 4
-    dist2 = 3 * dist
+    dist = halfcircle(turtle, size)
+    turtle.forward(dist[1])
     turtle.left(90)
     turtle.up()
-    turtle.forward(dist)
-    turtle.down()
-    turtle.right(180)
-    turtle.circle(dist, 180)
-    turtle.forward(dist2)
-    turtle.left(90)
-    turtle.up()
-    turtle.forward(2 * dist)
+    turtle.forward(2 * dist[0])
     turtle.down()
     turtle.left(90)
-    turtle.forward(dist2)
+    turtle.forward(dist[1])
     turtle.up()
-    turtle.forward(dist)
+    turtle.forward(dist[0])
     turtle.left(90)
-    turtle.forward(2.2 * dist)
+    turtle.forward(2.2 * dist[0])
     turtle.down()
 
 
@@ -470,44 +441,42 @@ def letterW(turtle, size):
 
 
 def letterX(turtle, size):
-    angle = 27
-    angle2 = 90 - angle
-    angle3 = 90 + angle
-    dist = size / math.cos(math.radians(angle))
-    turtle.left(angle2)
-    turtle.forward(dist)
+    angle = angle1()
+    angle3 = 90 - 27
+    dist = size / math.cos(math.radians(angle[0]))
     turtle.left(angle3)
+    turtle.forward(dist)
+    turtle.left(angle[1])
     turtle.up()
-    turtle.forward(size * math.tan(math.radians(angle)))
+    turtle.forward(size * math.tan(math.radians(angle[0])))
     turtle.down()
-    turtle.left(angle3)
+    turtle.left(angle[1])
     turtle.forward(dist)
-    turtle.left(angle2)
+    turtle.left(angle3)
     turtle.up()
     turtle.forward(size / 20)
     turtle.down()
 
 
 def letterY(turtle, size):
-    angle = 27
-    angle2 = 90 + angle
-    dist = 0.5 * size * math.tan(math.radians(angle))
+    angle = angle1()
+    dist = 0.5 * size * math.tan(math.radians(angle[0]))
     dist2 = size / 2
-    dist3 = 0.5 * size / math.cos(math.radians(angle))
+    dist3 = 0.5 * size / math.cos(math.radians(angle[0]))
     turtle.up()
     turtle.forward(dist)
     turtle.down()
     turtle.left(90)
     turtle.forward(size / 2)
-    turtle.left(angle)
+    turtle.left(angle[0])
     turtle.forward(dist3)
-    turtle.right(angle2)
+    turtle.right(angle[1])
     turtle.up()
     turtle.forward(2 * dist)
     turtle.down()
-    turtle.right(angle2)
+    turtle.right(angle[1])
     turtle.forward(dist3)
-    turtle.left(angle)
+    turtle.left(angle[0])
     turtle.up()
     turtle.forward(dist2)
     turtle.left(90)
@@ -517,19 +486,18 @@ def letterY(turtle, size):
 
 
 def letterZ(turtle, size):
-    angle = 27
-    angle2 = 90 + angle
-    dist = size * math.tan(math.radians(angle))
-    dist2 = size / math.cos(math.radians(angle))
+    angle = angle1()
+    dist = size * math.tan(math.radians(angle[0]))
+    dist2 = size / math.cos(math.radians(angle[0]))
     turtle.left(90)
     turtle.up()
     turtle.forward(size)
     turtle.down()
     turtle.right(90)
     turtle.forward(dist)
-    turtle.right(angle2)
+    turtle.right(angle[1])
     turtle.forward(dist2)
-    turtle.left(angle2)
+    turtle.left(angle[1])
     turtle.forward(dist)
     turtle.up()
     turtle.forward(size / 20)

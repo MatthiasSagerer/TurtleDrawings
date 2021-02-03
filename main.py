@@ -13,6 +13,7 @@ def reset(turtle, sec):
     turtle.seth(0)
     turtle.down()
 
+
 def resetAndGoTo(turtle, x, y):
     turtle.clear()
     turtle.up()
@@ -25,7 +26,7 @@ window = turtle.Screen()
 window.setup(width=1.0, height=1.0, startx=None, starty=None)
 window.colormode(255)
 ralf = turtle.Turtle()
-ralf.speed(50)
+ralf.speed(20)
 
 resetAndGoTo(ralf, -300, 0)
 
